@@ -1,5 +1,7 @@
 # Проект: Uplift-моделирование для Яндекс Еды
 
+**Uplift-моделирование для таргетированного маркетинга:** T/R-learner, Optuna, MLflow, метрика Uplift@30%.
+
 ## Описание проекта
 
 Разработка uplift-модели для определения целевой аудитории, которой стоит предложить промокод на 500 рублей на доставку еды из ресторанов. Цель — максимизировать метрику Uplift@30% путем идентификации "убеждаемых" клиентов.
@@ -12,7 +14,7 @@
 ## Структура проекта
 
 ```
-mle-uplift-final-project-2025/
+uplift-modeling/
 ├── data/                    # Данные проекта
 ├── pictures/               # Сохраненные визуализации
 ├── utils/                  # Вспомогательные функции
@@ -30,30 +32,19 @@ mle-uplift-final-project-2025/
 Склонируйте репозиторий проекта:
 
 ```bash
-git clone https://github.com/yandex-praktikum/mle-uplift-final-project-2025.git
-cd mle-uplift-final-project-2025
+git clone https://github.com/DataClasse/uplift-modeling.git
+cd uplift-modeling
 ```
 
 ### 2. Загрузка данных
 
-**Важно:** Датасет `uplift_fp_data.csv` необходимо скачать из оригинального репозитория Яндекс Практикум:
-
-```bash
-# Скачайте файл uplift_fp_data.csv из репозитория:
-# https://github.com/yandex-praktikum/mle-uplift-final-project-2025
-# И поместите его в директорию data/
-
-# Или используйте прямую ссылку (если доступна):
-# wget https://raw.githubusercontent.com/yandex-praktikum/mle-uplift-final-project-2025/main/data/uplift_fp_data.csv -O data/uplift_fp_data.csv
-```
+Датасет `uplift_fp_data.csv` разместите в директории `data/`.
 
 **Описание датасета:**
 - Размер: 64 000 клиентов
 - Формат: CSV файл
 - Расположение: `data/uplift_fp_data.csv`
 - Столбцы: `recency`, `history_segment`, `history`, `mens`, `womens`, `zip_code`, `newbie`, `channel`, `treatment`, `target`
-
-**Примечание:** Если вы используете этот репозиторий как форк, данные могут быть уже включены. Проверьте наличие файла `data/uplift_fp_data.csv`.
 
 ### 3. Создание виртуального окружения
 
@@ -185,4 +176,3 @@ chmod +x rms.sh
 ## Автор
 
 Дмитрий Щербаков
-Проект выполнен в рамках курса MLE (Machine Learning Engineering) от Яндекс Практикум.
